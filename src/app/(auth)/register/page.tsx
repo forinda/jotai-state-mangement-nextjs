@@ -1,8 +1,11 @@
-'use client'
-import React from 'react'
+"use client";
+import OpenLayout from "@/components/OpenLayout";
+import React from "react";
 
 export default function Register() {
 	return (
-		<div>Register</div>
-	)
+		<OpenLayout>
+			<div>Register</div>
+		</OpenLayout>
+	);
 }

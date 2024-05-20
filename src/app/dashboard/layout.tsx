@@ -12,7 +12,7 @@ function DashboardLayout(props: Props) {
 
 	return (
 		<ProtectedPage roles={[]}>
-			<div className="bg-white flex gap-2 ">
+			<div className="bg-white flex gap-2 text-black">
 				<div className="flex flex-col w-64 h-screen border-r bg-white">
 					<div className="border-b w-full py-4 flex justify-center flex-col items-center bg-gray-50">
 						<div className="h-16 w-16 bg-neutral-400 rounded-full overflow-hidden mb-2">

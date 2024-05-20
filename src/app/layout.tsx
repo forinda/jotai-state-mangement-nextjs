@@ -3,7 +3,6 @@ import { Encode_Sans } from "next/font/google";
 import "./globals.css";
 // import JotaiProvider from "@/providers/JotaiProvider";
 import { Suspense } from "react";
-import JotaiProvider from "@/providers/JotaiProvider";
 
 const sans = Encode_Sans({ subsets: ["latin"] });
 
@@ -15,13 +14,15 @@ export const metadata: Metadata = {
 export default function RootLayout({
 	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" suppressHydrationWarning>
-			<JotaiProvider>
-				<body className={sans.className}>{children}</body>
-			</JotaiProvider>
+		<html lang="en">
+			{/* <JotaiProvider> */}
+			<body className={sans.className}>
+				<Suspense>{children}</Suspense>
+			</body>
+			{/* </JotaiProvider> */}
 		</html>
 	);
 }
